@@ -1,0 +1,166 @@
+[debug] [2025-01-23T13:00:29.664Z] ----------------------------------------------------------------------
+[debug] [2025-01-23T13:00:29.667Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LEGION\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2025-01-23T13:00:29.667Z] CLI Version:   13.29.1
+[debug] [2025-01-23T13:00:29.667Z] Platform:      win32
+[debug] [2025-01-23T13:00:29.667Z] Node Version:  v23.6.0
+[debug] [2025-01-23T13:00:29.667Z] Time:          Thu Jan 23 2025 15:00:29 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-01-23T13:00:29.668Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-23T13:00:29.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-23T13:00:29.779Z] > authorizing via signed-in user (abdallahshedid.as@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-01-23T13:00:29.790Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-01-23T13:00:29.791Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-01-23T13:00:29.796Z] [hub] writing locator at C:\Users\LEGION\AppData\Local\Temp\hub-mysterytask-7c5d6.json
+[debug] [2025-01-23T13:00:29.814Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-01-23T13:00:29.814Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-01-23T13:00:29.814Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-01-23T13:00:29.814Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-01-23T13:00:29.818Z] defaultcredentials: writing to file C:\Users\LEGION\AppData\Roaming\firebase\abdallahshedid_as_gmail.com_application_default_credentials.json
+[debug] [2025-01-23T13:00:29.820Z] Setting GAC to C:\Users\LEGION\AppData\Roaming\firebase\abdallahshedid_as_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\LEGION\\AppData\\Roaming\\firebase\\abdallahshedid_as_gmail.com_application_default_credentials.json"}}
+[debug] [2025-01-23T13:00:29.821Z] Checked if tokens are valid: true, expires at: 1737639816424
+[debug] [2025-01-23T13:00:29.821Z] Checked if tokens are valid: true, expires at: 1737639816424
+[debug] [2025-01-23T13:00:29.822Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mysterytask-7c5d6/adminSdkConfig [none]
+[debug] [2025-01-23T13:00:30.180Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mysterytask-7c5d6/adminSdkConfig 200
+[debug] [2025-01-23T13:00:30.180Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mysterytask-7c5d6/adminSdkConfig {"projectId":"mysterytask-7c5d6","storageBucket":"mysterytask-7c5d6.firebasestorage.app"}
+[info] i  functions: Watching "E:\Study\MysteryTask\mysterybag\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"E:\\Study\\MysteryTask\\mysterybag\\functions\" for Cloud Functions..."}}
+[debug] [2025-01-23T13:00:30.211Z] Validating nodejs source
+[debug] [2025-01-23T13:00:31.343Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-23T13:00:31.343Z] Building nodejs source
+[debug] [2025-01-23T13:00:31.343Z] Failed to find version of module node: reached end of search path E:\Study\MysteryTask\mysterybag\functions\node_modules
+[warn] !  functions: Your requested "node" version "22" doesn't match your global version "23". Using node@23 from host. 
+[debug] [2025-01-23T13:00:31.345Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-23T13:00:31.355Z] Found firebase-functions binary at 'E:\Study\MysteryTask\mysterybag\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8846
+
+[debug] [2025-01-23T13:00:39.655Z] Got response from /__/functions.yaml {"endpoints":{"helloUser":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloUser"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: helloUser. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloUser."}}
+[info] +  functions[us-central1-helloUser]: http function initialized (http://127.0.0.1:5001/mysterytask-7c5d6/us-central1/helloUser). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/mysterytask-7c5d6/us-central1/helloUser)."}}
+[debug] [2025-01-23T13:00:43.695Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-01-23T13:06:00.730Z] [work-queue] {"queuedWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T13:06:00.730Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-23T13:06:00.731Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T13:06:00.730Z"],"workRunningCount":1}
+[debug] [2025-01-23T13:06:00.731Z] Accepted request GET /mysterytask-7c5d6/us-central1/helloUser --> us-central1-helloUser
+[debug] [2025-01-23T13:06:00.735Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-01-23T13:06:00.736Z] [functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/"}}
+[debug] [2025-01-23T13:06:00.748Z] [worker-pool] addWorker(us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloUser)"}}
+[debug] [2025-01-23T13:06:00.749Z] [worker-pool] Adding worker with key us-central1-helloUser, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloUser, total=1"}}
+[info] >  (node:34532) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:34532) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:34532) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2025-01-23T13:06:02.457Z] [runtime-status] [34532] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:02.457Z] [runtime-status] [34532] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.2.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.2.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:02.458Z] [runtime-status] [34532] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-01-23T13:06:02.459Z] [runtime-status] [34532] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.2.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.2.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:02.841Z] [runtime-status] [34532] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-01-23T13:06:02.841Z] [runtime-status] [34532] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.2.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.2.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}}"}}
+[debug] [2025-01-23T13:06:02.842Z] [runtime-status] [34532] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.2.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.2.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:03.000Z] [runtime-status] [34532] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:03.041Z] [runtime-status] [34532] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.2.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.2.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-01-23T13:06:03.041Z] [runtime-status] [34532] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"E:\\Study\\MysteryTask\\mysterybag\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2025-01-23T13:06:03.047Z] [runtime-status] [34532] Functions runtime initialized. {"cwd":"E:\\Study\\MysteryTask\\mysterybag\\functions","node_version":"23.6.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Functions runtime initialized. {\"cwd\":\"E:\\\\Study\\\\MysteryTask\\\\mysterybag\\\\functions\",\"node_version\":\"23.6.0\"}"}}
+[debug] [2025-01-23T13:06:03.047Z] [runtime-status] [34532] Listening to port: \\?\pipe\fire_emu_5dfedf81db3aa186 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[runtime-status] [34532] Listening to port: \\\\?\\pipe\\fire_emu_5dfedf81db3aa186"}}
+[debug] [2025-01-23T13:06:03.074Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-23T13:06:03.074Z] [worker-pool] submitRequest(triggerId=us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloUser)"}}
+[info] i  functions: Beginning execution of "us-central1-helloUser" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Beginning execution of \"us-central1-helloUser\""}}
+[debug] [2025-01-23T13:06:03.075Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY"}}
+[debug] [2025-01-23T13:06:03.080Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloUser" in 4.6824ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finished \"us-central1-helloUser\" in 4.6824ms"}}
+[debug] [2025-01-23T13:06:03.081Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-23T13:06:03.081Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-01-23T13:06:03.081Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-01-23T13:06:03.081Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-23T13:06:15.084Z] [work-queue] {"queuedWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T13:06:15.084Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-23T13:06:15.084Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T13:06:15.084Z"],"workRunningCount":1}
+[debug] [2025-01-23T13:06:15.085Z] Accepted request GET /mysterytask-7c5d6/us-central1/helloUser --> us-central1-helloUser
+[debug] [2025-01-23T13:06:15.087Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-01-23T13:06:15.087Z] [functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/"}}
+[debug] [2025-01-23T13:06:15.087Z] [worker-pool] submitRequest(triggerId=us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloUser)"}}
+[info] i  functions: Beginning execution of "us-central1-helloUser" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Beginning execution of \"us-central1-helloUser\""}}
+[debug] [2025-01-23T13:06:15.088Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY"}}
+[debug] [2025-01-23T13:06:15.092Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloUser" in 4.508ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finished \"us-central1-helloUser\" in 4.508ms"}}
+[debug] [2025-01-23T13:06:15.093Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-23T13:06:15.094Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-01-23T13:06:15.094Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-01-23T13:06:15.094Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-23T17:06:14.300Z] [work-queue] {"queuedWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T17:06:14.300Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-23T17:06:14.301Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-23T17:06:14.300Z"],"workRunningCount":1}
+[debug] [2025-01-23T17:06:14.301Z] Accepted request GET /mysterytask-7c5d6/us-central1/helloUser --> us-central1-helloUser
+[debug] [2025-01-23T17:06:14.304Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-01-23T17:06:14.304Z] [functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/"}}
+[debug] [2025-01-23T17:06:14.304Z] [worker-pool] submitRequest(triggerId=us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloUser)"}}
+[info] i  functions: Beginning execution of "us-central1-helloUser" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Beginning execution of \"us-central1-helloUser\""}}
+[debug] [2025-01-23T17:06:14.305Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY"}}
+[debug] [2025-01-23T17:06:14.308Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloUser" in 2.893ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finished \"us-central1-helloUser\" in 2.893ms"}}
+[debug] [2025-01-23T17:06:14.309Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-23T17:06:14.309Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-01-23T17:06:14.309Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-01-23T17:06:14.310Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-24T13:09:00.388Z] [work-queue] {"queuedWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-24T13:09:00.388Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-24T13:09:00.388Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-24T13:09:00.388Z"],"workRunningCount":1}
+[debug] [2025-01-24T13:09:00.388Z] Accepted request GET /mysterytask-7c5d6/us-central1/helloUser --> us-central1-helloUser
+[debug] [2025-01-24T13:09:00.393Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-01-24T13:09:00.393Z] [functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/"}}
+[debug] [2025-01-24T13:09:00.393Z] [worker-pool] submitRequest(triggerId=us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloUser)"}}
+[info] i  functions: Beginning execution of "us-central1-helloUser" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Beginning execution of \"us-central1-helloUser\""}}
+[debug] [2025-01-24T13:09:00.395Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY"}}
+[debug] [2025-01-24T13:09:00.398Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloUser" in 3.9474ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finished \"us-central1-helloUser\" in 3.9474ms"}}
+[debug] [2025-01-24T13:09:00.400Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-24T13:09:00.400Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-01-24T13:09:00.401Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-01-24T13:09:00.401Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-24T13:09:00.527Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2025-01-24T13:09:38.498Z] [work-queue] {"queuedWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-24T13:09:38.498Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-01-24T13:09:38.499Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/mysterytask-7c5d6/us-central1/helloUser-2025-01-24T13:09:38.498Z"],"workRunningCount":1}
+[debug] [2025-01-24T13:09:38.499Z] Accepted request GET /mysterytask-7c5d6/us-central1/helloUser --> us-central1-helloUser
+[debug] [2025-01-24T13:09:38.503Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-01-24T13:09:38.503Z] [functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/mysterytask-7c5d6/us-central1/helloUser, mapping to path=/"}}
+[debug] [2025-01-24T13:09:38.503Z] [worker-pool] submitRequest(triggerId=us-central1-helloUser) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloUser)"}}
+[info] i  functions: Beginning execution of "us-central1-helloUser" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Beginning execution of \"us-central1-helloUser\""}}
+[debug] [2025-01-24T13:09:38.505Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: BUSY"}}
+[debug] [2025-01-24T13:09:38.508Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloUser" in 3.6243ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finished \"us-central1-helloUser\" in 3.6243ms"}}
+[debug] [2025-01-24T13:09:38.510Z] [worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"[worker-us-central1-helloUser-ee965306-f4ff-4a33-abd4-f499fd56e08b]: IDLE"}}
+[debug] [2025-01-24T13:09:38.510Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-01-24T13:09:38.510Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloUser"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-01-24T13:09:38.510Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
